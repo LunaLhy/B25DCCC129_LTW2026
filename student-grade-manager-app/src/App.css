@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #2b3a3a;
+  background: #eef3f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+button,
+label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 24px;
+  background: #fbfdfc;
+  border: 1px solid #c9d6d6;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 22px;
+  margin: 0 0 18px;
+  color: #35595f;
+}
+
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dbe5e5;
+}
+
+.field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  padding: 6px 8px;
+  border: 1px solid #b7c7c7;
+  border-radius: 3px;
+  background: #fff;
+  color: #2b3a3a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  outline: none;
+  border-color: #5b8f96;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #b7c7c7;
+  border-radius: 3px;
+  background: #e4edec;
+  color: #2b3a3a;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d5e3e2;
+}
+
+.student-form button[type='submit'] {
+  background: #5b8f96;
+  border-color: #5b8f96;
+  color: #fff;
+}
+
+.student-form button[type='submit']:hover {
+  background: #4d7d84;
+}
+
+.error {
+  flex-basis: 100%;
+  margin: 0;
+  color: #b3534a;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.toolbar button.active {
+  background: #5b8f96;
+  border-color: #5b8f96;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  border: 1px solid #d3dfdf;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+th {
+  background: #dde9e8;
+  color: #35595f;
+}
+
+tbody tr:hover {
+  background: #f3f8f7;
+}
+
+td button {
+  background: #f6e9e7;
+  border-color: #dcbfbb;
+  color: #8a3f37;
+}
+
+td button:hover {
+  background: #efd9d6;
+}
+
+.summary {
+  margin: 14px 0 0;
+  color: #4a6366;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
